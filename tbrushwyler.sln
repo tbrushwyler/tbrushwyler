@@ -12,16 +12,38 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3EB304
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advocado.Migrations", "Advocado.Migrations\Advocado.Migrations.csproj", "{DE71166D-05A7-4A5A-A440-B73F9807A9DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advocado.Api", "Advocado.Api\Advocado.Api.csproj", "{28A6E2B4-3C15-489A-864C-861D74CE7AAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Develop|Any CPU = Develop|Any CPU
+		Local|Any CPU = Local|Any CPU
+		Production|Any CPU = Production|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21216785-D071-494F-B84D-578EE554F939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21216785-D071-494F-B84D-578EE554F939}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21216785-D071-494F-B84D-578EE554F939}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21216785-D071-494F-B84D-578EE554F939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21216785-D071-494F-B84D-578EE554F939}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{21216785-D071-494F-B84D-578EE554F939}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{21216785-D071-494F-B84D-578EE554F939}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{21216785-D071-494F-B84D-578EE554F939}.Local|Any CPU.Build.0 = Local|Any CPU
+		{21216785-D071-494F-B84D-578EE554F939}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{21216785-D071-494F-B84D-578EE554F939}.Production|Any CPU.Build.0 = Production|Any CPU
+		{21216785-D071-494F-B84D-578EE554F939}.Production|Any CPU.Deploy.0 = Production|Any CPU
+		{DE71166D-05A7-4A5A-A440-B73F9807A9DC}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{DE71166D-05A7-4A5A-A440-B73F9807A9DC}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{DE71166D-05A7-4A5A-A440-B73F9807A9DC}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{DE71166D-05A7-4A5A-A440-B73F9807A9DC}.Local|Any CPU.Build.0 = Local|Any CPU
+		{DE71166D-05A7-4A5A-A440-B73F9807A9DC}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{DE71166D-05A7-4A5A-A440-B73F9807A9DC}.Production|Any CPU.Build.0 = Production|Any CPU
+		{DE71166D-05A7-4A5A-A440-B73F9807A9DC}.Production|Any CPU.Deploy.0 = Production|Any CPU
+		{28A6E2B4-3C15-489A-864C-861D74CE7AAB}.Develop|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A6E2B4-3C15-489A-864C-861D74CE7AAB}.Develop|Any CPU.Build.0 = Debug|Any CPU
+		{28A6E2B4-3C15-489A-864C-861D74CE7AAB}.Local|Any CPU.ActiveCfg = Release|Any CPU
+		{28A6E2B4-3C15-489A-864C-861D74CE7AAB}.Local|Any CPU.Build.0 = Release|Any CPU
+		{28A6E2B4-3C15-489A-864C-861D74CE7AAB}.Production|Any CPU.ActiveCfg = Release|Any CPU
+		{28A6E2B4-3C15-489A-864C-861D74CE7AAB}.Production|Any CPU.Build.0 = Release|Any CPU
+		{28A6E2B4-3C15-489A-864C-861D74CE7AAB}.Production|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
