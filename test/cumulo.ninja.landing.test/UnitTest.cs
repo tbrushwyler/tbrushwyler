@@ -11,11 +11,5 @@ namespace cumulo.ninja.landing.test
         {
             Assert.AreEqual(true, true);
         }
-
-        [Test]
-        public void FalseTest()
-        {
-            Assert.AreEqual(true, false);
-        }
     }
 }
