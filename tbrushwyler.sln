@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3EB304
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.landing", "cumulo.ninja.landing\cumulo.ninja.landing.csproj", "{0B6DD5F7-B583-4CCD-9EA9-0899EC8858AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.landing.test", "test\cumulo.ninja.landing.test\cumulo.ninja.landing.test.csproj", "{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,16 @@ Global
 		{0B6DD5F7-B583-4CCD-9EA9-0899EC8858AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B6DD5F7-B583-4CCD-9EA9-0899EC8858AF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0B6DD5F7-B583-4CCD-9EA9-0899EC8858AF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Develop|Any CPU.ActiveCfg = Debug|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Develop|Any CPU.Build.0 = Debug|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Local|Any CPU.ActiveCfg = Release|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Local|Any CPU.Build.0 = Release|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Production|Any CPU.ActiveCfg = Release|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Production|Any CPU.Build.0 = Release|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
