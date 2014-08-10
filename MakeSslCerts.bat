@@ -1,0 +1,1 @@
+makecert -r -pe -n cn=local.cumulo.ninja -b 01/01/2014 -e 01/01/2039 -eku 1.3.6.1.5.5.7.3.1 -ss my -sr localmachine -sky exchange -sp "Microsoft RSA SChannel Cryptographic Provider" -sy 12

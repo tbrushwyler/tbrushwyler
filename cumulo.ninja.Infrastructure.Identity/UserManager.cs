@@ -11,7 +11,7 @@ namespace cumulo.ninja.Infrastructure.Identity
     {
         public UserManager(IUserStore<TUser> userStore) : base(userStore)
         {
-        
-        } 
+            
+        }
     }
 }

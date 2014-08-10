@@ -24,6 +24,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.Infrastructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.Infrastructure.Migrations", "cumulo.ninja.Infrastructure.Migrations\cumulo.ninja.Infrastructure.Migrations.csproj", "{CE9365AD-F85E-433C-A664-3F6345CA1337}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.Infrastructure.NHibernate", "cumulo.ninja.Infrastructure.NHibernate\cumulo.ninja.Infrastructure.NHibernate.csproj", "{A820ABC4-A2A1-4330-B602-FE8DBD71262D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.Infrastructure.IoC", "cumulo.ninja.Infrastructure.IoC\cumulo.ninja.Infrastructure.IoC.csproj", "{02D25564-FFCF-4C90-A6CD-F299EA116E11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.Web", "cumulo.ninja.Web\cumulo.ninja.Web.csproj", "{B73A2D26-5CF5-4E10-88D9-F0C2129B2274}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Develop|Any CPU = Develop|Any CPU
@@ -61,6 +67,24 @@ Global
 		{CE9365AD-F85E-433C-A664-3F6345CA1337}.Local|Any CPU.Build.0 = Local|Any CPU
 		{CE9365AD-F85E-433C-A664-3F6345CA1337}.Production|Any CPU.ActiveCfg = Production|Any CPU
 		{CE9365AD-F85E-433C-A664-3F6345CA1337}.Production|Any CPU.Build.0 = Production|Any CPU
+		{A820ABC4-A2A1-4330-B602-FE8DBD71262D}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{A820ABC4-A2A1-4330-B602-FE8DBD71262D}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{A820ABC4-A2A1-4330-B602-FE8DBD71262D}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{A820ABC4-A2A1-4330-B602-FE8DBD71262D}.Local|Any CPU.Build.0 = Local|Any CPU
+		{A820ABC4-A2A1-4330-B602-FE8DBD71262D}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{A820ABC4-A2A1-4330-B602-FE8DBD71262D}.Production|Any CPU.Build.0 = Production|Any CPU
+		{02D25564-FFCF-4C90-A6CD-F299EA116E11}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{02D25564-FFCF-4C90-A6CD-F299EA116E11}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{02D25564-FFCF-4C90-A6CD-F299EA116E11}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{02D25564-FFCF-4C90-A6CD-F299EA116E11}.Local|Any CPU.Build.0 = Local|Any CPU
+		{02D25564-FFCF-4C90-A6CD-F299EA116E11}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{02D25564-FFCF-4C90-A6CD-F299EA116E11}.Production|Any CPU.Build.0 = Production|Any CPU
+		{B73A2D26-5CF5-4E10-88D9-F0C2129B2274}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{B73A2D26-5CF5-4E10-88D9-F0C2129B2274}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{B73A2D26-5CF5-4E10-88D9-F0C2129B2274}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{B73A2D26-5CF5-4E10-88D9-F0C2129B2274}.Local|Any CPU.Build.0 = Local|Any CPU
+		{B73A2D26-5CF5-4E10-88D9-F0C2129B2274}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{B73A2D26-5CF5-4E10-88D9-F0C2129B2274}.Production|Any CPU.Build.0 = Production|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,5 +93,7 @@ Global
 		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8} = {4C24953A-3C04-4B0F-93EA-CB027A679A99}
 		{A2078F34-12C9-4512-8A14-B597EFA45F85} = {89BD258B-1F17-4D88-99C5-D72FF1BEF686}
 		{CE9365AD-F85E-433C-A664-3F6345CA1337} = {89BD258B-1F17-4D88-99C5-D72FF1BEF686}
+		{A820ABC4-A2A1-4330-B602-FE8DBD71262D} = {89BD258B-1F17-4D88-99C5-D72FF1BEF686}
+		{02D25564-FFCF-4C90-A6CD-F299EA116E11} = {89BD258B-1F17-4D88-99C5-D72FF1BEF686}
 	EndGlobalSection
 EndGlobal

@@ -12,47 +12,43 @@ namespace cumulo.ninja.Infrastructure.Migrations
     {
         public override void Up()
         {
-            Create.Schema("Identity");
-
-            Create.Table("User").InSchema("Identity")
+            Create.Table("IdentityUser")
                 .WithColumn("Id").AsString(128).NotNullable().PrimaryKey()
                 .WithColumn("Username").AsString(255).Unique().NotNullable()
                 .WithColumn("Email").AsString(255).Unique().NotNullable()
-                .WithColumn("PasswordHash").AsString(255).NotNullable()
-                .WithColumn("SecurityStamp").AsString(255)
-                .WithColumn("ConfirmationToken").AsString(255).Nullable()
-                .WithColumn("PasswordResetToken").AsString(255).Nullable();
+                .WithColumn("PasswordHash").AsString(255).Nullable()
+                .WithColumn("SecurityStamp").AsString(255).Nullable()
+                .WithColumn("IsConfirmedByUser").AsBoolean().NotNullable().WithDefaultValue(false)
+                .WithColumn("ConfirmationToken").AsString(255).Nullable();
 
-            Create.Table("Role").InSchema("Identity")
+            Create.Table("IdentityRole")
                 .WithColumn("Id").AsString(128).NotNullable().PrimaryKey()
-                .WithColumn("Name").AsString(255);
+                .WithColumn("Name").AsString(255).NotNullable();
 
-            Create.Table("UserRole").InSchema("Identity")
-                .WithColumn("UserId").AsString(128).NotNullable().PrimaryKey().ForeignKey("UserRoleToUser", "Identity", "User", "Id")
-                .WithColumn("RoleId").AsString(128).NotNullable().PrimaryKey().ForeignKey("UserRoleToRole", "Identity", "Role", "Id");
+            Create.Table("IdentityUserRole")
+                .WithColumn("UserId").AsString(128).NotNullable().PrimaryKey().ForeignKey("UserRoleToUser", "IdentityUser", "Id")
+                .WithColumn("RoleId").AsString(128).NotNullable().PrimaryKey().ForeignKey("UserRoleToRole", "IdentityRole", "Id");
 
-            Create.Table("Login").InSchema("Identity")
+            Create.Table("IdentityLogin")
                 .WithColumn("Id").AsInt64().NotNullable().PrimaryKey().Identity()
-                .WithColumn("LoginProvider").AsString(255)
-                .WithColumn("ProviderKey").AsString(255)
-                .WithColumn("UserId").AsString(128).NotNullable().ForeignKey("LoginToUser", "Identity", "User", "Id");
+                .WithColumn("LoginProvider").AsString(255).NotNullable()
+                .WithColumn("ProviderKey").AsString(255).NotNullable()
+                .WithColumn("UserId").AsString(128).NotNullable().ForeignKey("LoginToUser", "IdentityUser", "Id");
 
-            Create.Table("Claim").InSchema("Identity")
+            Create.Table("IdentityClaim")
                 .WithColumn("Id").AsInt64().NotNullable().PrimaryKey().Identity()
-                .WithColumn("ClaimType").AsString(255)
-                .WithColumn("ClaimValue").AsString(255)
-                .WithColumn("UserId").AsString(128).NotNullable().ForeignKey("ClaimToUser", "Identity", "User", "Id");
+                .WithColumn("ClaimType").AsString(255).NotNullable()
+                .WithColumn("ClaimValue").AsString(255).NotNullable()
+                .WithColumn("UserId").AsString(128).NotNullable().ForeignKey("ClaimToUser", "IdentityUser", "Id");
         }
 
         public override void Down()
         {
-            Delete.Table("Claim").InSchema("Identity");
-            Delete.Table("Login").InSchema("Identity");
-            Delete.Table("UserRole").InSchema("Identity");
-            Delete.Table("Role").InSchema("Identity");
-            Delete.Table("User").InSchema("Identity");
-
-            Delete.Schema("Identity");
+            Delete.Table("IdentityClaim");
+            Delete.Table("IdentityLogin");
+            Delete.Table("IdentityUserRole");
+            Delete.Table("IdentityRole");
+            Delete.Table("IdentityUser");
         }
     }
 }

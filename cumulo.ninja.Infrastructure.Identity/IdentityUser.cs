@@ -13,7 +13,7 @@ namespace cumulo.ninja.Infrastructure.Identity
     public class IdentityUser : IUser
     {
         public User BaseType { get; set; }
-        private ICollection<IdentityUserClaim> _logins;
+        private ICollection<IdentityUserLogin> _logins;
 
         public IdentityUser(User baseType)
         {
@@ -104,13 +104,13 @@ namespace cumulo.ninja.Infrastructure.Identity
             }
         }
 
-        public virtual ICollection<IdentityUserClaim> Logins
+        public virtual ICollection<IdentityUserLogin> Logins
         {
             get
             {
                 if (this._logins == null)
                 {
-                    this._logins = new Collection<IdentityUserClaim>();
+                    this._logins = new Collection<IdentityUserLogin>();
                 }
                 return _logins;
 
@@ -126,11 +126,11 @@ namespace cumulo.ninja.Infrastructure.Identity
             Claims.Add(claim);
         }
 
-        public virtual void AddUserLogin(IdentityUserClaim login)
+        public virtual void AddUserLogin(IdentityUserLogin login)
         {
             login.User = this;
             if (Logins == null)
-                Logins = new Collection<IdentityUserClaim>();
+                Logins = new Collection<IdentityUserLogin>();
             Logins.Add(login);
         }
 
