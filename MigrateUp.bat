@@ -1,2 +1,1 @@
-
-.\packages\FluentMigrator.Tools.1.2.1.0\tools\AnyCPU\40\Migrate -c "server=.\SQLExpress;database=advocado;Integrated Security=SSPI" -db sqlserver2008 -a "Advocado.Migrations\bin\Local\Advocado.Migrations.dll" -t migrate:up
+packages\FluentMigrator.1.2.1.0\tools\Migrate.exe -a cumulo.ninja.Infrastructure.Migrations\bin\Local\cumulo.ninja.Infrastructure.Migrations.dll -db sqlserver2012 --conn "Default"

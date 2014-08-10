@@ -14,6 +14,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.landing", "cum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.landing.test", "test\cumulo.ninja.landing.test\cumulo.ninja.landing.test.csproj", "{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.Core", "cumulo.ninja.Core\cumulo.ninja.Core.csproj", "{312F0F1A-37CC-41BD-A878-0EEBA633E51D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{89BD258B-1F17-4D88-99C5-D72FF1BEF686}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{4C24953A-3C04-4B0F-93EA-CB027A679A99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.Infrastructure.Identity", "cumulo.ninja.Infrastructure.Identity\cumulo.ninja.Infrastructure.Identity.csproj", "{A2078F34-12C9-4512-8A14-B597EFA45F85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cumulo.ninja.Infrastructure.Migrations", "cumulo.ninja.Infrastructure.Migrations\cumulo.ninja.Infrastructure.Migrations.csproj", "{CE9365AD-F85E-433C-A664-3F6345CA1337}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Develop|Any CPU = Develop|Any CPU
@@ -33,8 +43,31 @@ Global
 		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Local|Any CPU.Build.0 = Local|Any CPU
 		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Production|Any CPU.ActiveCfg = Production|Any CPU
 		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8}.Production|Any CPU.Build.0 = Production|Any CPU
+		{312F0F1A-37CC-41BD-A878-0EEBA633E51D}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{312F0F1A-37CC-41BD-A878-0EEBA633E51D}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{312F0F1A-37CC-41BD-A878-0EEBA633E51D}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{312F0F1A-37CC-41BD-A878-0EEBA633E51D}.Local|Any CPU.Build.0 = Local|Any CPU
+		{312F0F1A-37CC-41BD-A878-0EEBA633E51D}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{312F0F1A-37CC-41BD-A878-0EEBA633E51D}.Production|Any CPU.Build.0 = Production|Any CPU
+		{A2078F34-12C9-4512-8A14-B597EFA45F85}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{A2078F34-12C9-4512-8A14-B597EFA45F85}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{A2078F34-12C9-4512-8A14-B597EFA45F85}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{A2078F34-12C9-4512-8A14-B597EFA45F85}.Local|Any CPU.Build.0 = Local|Any CPU
+		{A2078F34-12C9-4512-8A14-B597EFA45F85}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{A2078F34-12C9-4512-8A14-B597EFA45F85}.Production|Any CPU.Build.0 = Production|Any CPU
+		{CE9365AD-F85E-433C-A664-3F6345CA1337}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{CE9365AD-F85E-433C-A664-3F6345CA1337}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{CE9365AD-F85E-433C-A664-3F6345CA1337}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{CE9365AD-F85E-433C-A664-3F6345CA1337}.Local|Any CPU.Build.0 = Local|Any CPU
+		{CE9365AD-F85E-433C-A664-3F6345CA1337}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{CE9365AD-F85E-433C-A664-3F6345CA1337}.Production|Any CPU.Build.0 = Production|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{346ECF3A-A3D9-4EA2-BBAE-6D2A6A6A97C8} = {4C24953A-3C04-4B0F-93EA-CB027A679A99}
+		{A2078F34-12C9-4512-8A14-B597EFA45F85} = {89BD258B-1F17-4D88-99C5-D72FF1BEF686}
+		{CE9365AD-F85E-433C-A664-3F6345CA1337} = {89BD258B-1F17-4D88-99C5-D72FF1BEF686}
 	EndGlobalSection
 EndGlobal
