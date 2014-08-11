@@ -28,8 +28,8 @@ namespace cumulo.ninja.Infrastructure.NHibernate.Mappings
                 .ParentKeyColumn("UserId")
                 .ChildKeyColumn("RoleId")
                 .Cascade.All();
-            HasMany(x => x.Claims).KeyColumn("UserId").Cascade.AllDeleteOrphan();
-            HasMany(x => x.Logins).KeyColumn("UserId").Cascade.AllDeleteOrphan();
+            HasMany(x => x.Claims).KeyColumn("UserId").Cascade.All();
+            HasMany(x => x.Logins).KeyColumn("UserId").Cascade.All();
         }
     }
 }

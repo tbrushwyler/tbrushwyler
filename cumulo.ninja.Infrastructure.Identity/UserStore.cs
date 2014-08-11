@@ -137,7 +137,7 @@ namespace cumulo.ninja.Infrastructure.Identity
                 ClaimType = claim.Type,
                 ClaimValue = claim.Value
             });
-            user.Claims.Add(identityClaim);
+            user.AddUserClaim(identityClaim);
 
             UserRepo.Store(user.BaseType);
         }
@@ -168,7 +168,7 @@ namespace cumulo.ninja.Infrastructure.Identity
                 throw new InvalidOperationException(string.Format("Role {0} not found", role));
 
             var identityRole = new IdentityRole(coreRole);
-            user.Roles.Add(identityRole);
+            user.AddRole(identityRole);
 
             UserRepo.Store(user.BaseType);
         }

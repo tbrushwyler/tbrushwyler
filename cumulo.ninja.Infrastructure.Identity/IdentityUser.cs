@@ -13,7 +13,6 @@ namespace cumulo.ninja.Infrastructure.Identity
     public class IdentityUser : IUser
     {
         public User BaseType { get; set; }
-        private ICollection<IdentityUserLogin> _logins;
 
         public IdentityUser(User baseType)
         {
@@ -75,7 +74,7 @@ namespace cumulo.ninja.Infrastructure.Identity
                 ICollection<IdentityRole> roles = new Collection<IdentityRole>();
                 foreach (IdentityRole role in value)
                 {
-                    this.BaseType.Roles.Add(role.BaseType);
+                    BaseType.AddRole(role.BaseType);
                 }
             }
         }
@@ -99,7 +98,7 @@ namespace cumulo.ninja.Infrastructure.Identity
                 ICollection<IdentityUserClaim> claims = new Collection<IdentityUserClaim>();
                 foreach (IdentityUserClaim claim in value)
                 {
-                    this.BaseType.Claims.Add(claim.BaseType);
+                    BaseType.AddUserClaim(claim.BaseType);
                 }
             }
         }
@@ -108,14 +107,25 @@ namespace cumulo.ninja.Infrastructure.Identity
         {
             get
             {
-                if (this._logins == null)
+                ICollection<IdentityUserLogin> claims = new Collection<IdentityUserLogin>();
+                if (this.BaseType.Logins != null)
                 {
-                    this._logins = new Collection<IdentityUserLogin>();
+                    foreach (Login login in this.BaseType.Logins)
+                    {
+                        claims.Add(new IdentityUserLogin(login));
+                    }
                 }
-                return _logins;
+                return claims;
 
             }
-            protected set { this._logins = value; }
+            protected set
+            {
+                ICollection<IdentityUserLogin> logins = new Collection<IdentityUserLogin>();
+                foreach (var login in value)
+                {
+                    BaseType.AddUserLogin(login.BaseType);
+                }
+            }
         }
 
         public virtual void AddUserClaim(IdentityUserClaim claim)
@@ -141,6 +151,5 @@ namespace cumulo.ninja.Infrastructure.Identity
             Roles.Add(role);
             role.AddUser(this);
         }
-
     }
 }
